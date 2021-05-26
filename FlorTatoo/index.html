@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlorTatoo</title>
+    <link rel="preload" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preload" href="CSS/estilos.css" as="style">
+    <!-- Esto hace que cargue mas rápido -->
+
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+
+            <a href="galeria.html">Galería</a>
+            <a href="historiaTatuaje.html">Historia del tatuaje</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+    </div>
+    <div class="cabecera">
+        <header>
+            <h2 class="titular"><span>by </span> María Florencia Martino <span> Artista Plástica</span></h2>
+
+            <h1>FiFi TaToo</h1>
+
+        </header>
+
+        <section class="hero">
+            <div class="contenido-hero">
+                <h2>Diseños y desarrollos propios</h2>
+                <div class="ubicacion">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="150" height="150" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                    <p>C . A . B . A</p>
+                </div>
+                <a class="boton" href="#">Contactar</a>
+            </div>
+        </section>
+    </div>
+    <main class="contenedor sombra">
+
+        <h2>Servicios</h2>
+        <div class="servicios">
+            <section class="servicio">
+                <h3>Simbolos</h3>
+                <div class="iconos">
+                    <img src="imagenes/iconos/arbol.png" alt="" width="50px" height="60px">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam distinctio dolorem officiis rem, amet explicabo ipsam velit voluptatem aliquid aperiam iure harum incidunt quia exercitationem, esse ipsum a magnam ullam!</p>
+            </section>
+
+            <section class="servicio">
+                <h3>Imagenes/Frases</h3>
+                <div class="iconos">
+                    <img src="imagenes/iconos/pajarito.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iste asperiores et atque praesentium esse iusto, ea ad cumque, architecto adipisci nesciunt voluptatum omnis quas error sit blanditiis velit tempora?
+                </p>
+            </section>
+
+            <section class="servicio">
+                <h3>Originales</h3>
+                <div class="iconos">
+                    <img src="imagenes/iconos/chimbolito.png" alt="">
+                </div>
+                <p>Dolore veniam totam voluptas magnam minima blanditiis earum laborum. Et, vel nisi? Porro minus fugit nulla in nam necessitatibus repellendus dolore? Labore.</p>
+            </section>
+
+            <section class="servicio">
+                <h3>Body TaToo</h3>
+                <div class="iconos">
+                    <img src="imagenes/iconos/manoMaquina.png">
+                </div>
+                <p>Cemet consectetur **esta es una corrección desde github ** adipisicing elit.ioiukhflkdsnfdsfcccDeleniti recusandae accusamus perferendis ut repellat commodi culpa, architecto laborum tenetur, modi earum minus cum vitae dolorem odio tempora quae dolorum nisi.</p>
+
+            </section>
+
+        </div>
+        <!--.servicios-->
+        <!-- 
+        <section class="contacto-gral">
+            <div class="icono-contacto">
+                <h2>Contacto</h2>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg> 
+            </div>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Contactanos llenando el formulario</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Nombre">
+                        </div>
+                        <div class="campo">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel" placeholder="Solo numeros">
+                        </div>
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" type="email" placeholder="e-mail">
+                        </div>
+                        <div class="campo">
+                            <label>Comentario</label>
+                            <textarea class="input-text" name="comentario" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="alinear-derecha flex">
+                            <input class="boton w-sm-100" type="submit" name="Enviar">
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form> 
+        </section> -->
+    </main>
+    <footer class="fin-hoja">
+        <p>Todos los derechos reservados por: <span>  .:. María Florencia Martino .:.</span></p>
+    </footer>
+
+
+</body>
+
+</html>

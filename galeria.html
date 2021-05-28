@@ -5,283 +5,315 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlorTatoo</title>
+    <link rel="preload" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preload" href="CSS/estilos.css" as="style">
+    <!-- Esto hace que cargue mas rápido -->
+
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <!--     
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FiFiTaToo</title>
     <link rel="preload" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/normalize.css">
-
-
-    <style>
-        html {
-            font-size: 62.5%;
-            box-sizing: border-box;
-            /*box model*/
-            scroll-snap-type: y mandatory;
-            min-height: 100%;
-        }
-        
+ -->
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+        /*box model*/
+        scroll-snap-type: y mandatory;
+        min-height: 100%;
+    }
+    
+    body {
+        margin: auto;
+        background: lightgray;
+        text-align: center;
+        font-family: sans-serif;
+        color: #fefefe;
+        font-size: 16px;
+        font-family: 'Pacifico', cursive;
+        height: auto;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    .titulos {
+        max-width: 100%;
+        margin: 0px auto;
+        background-color: rgb(248, 82, 82);
+    }
+    
+    .subtitulo h2 {
+        color: rgb(82, 3, 3);
+    }
+    /* navegacion */
+    
+    .nav-bg {
+        background-color: var(--verde);
+    }
+    
+    .navegacion-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navegacion-principal a {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 2rem;
+    }
+    
+    .navegacion-principal a:hover {
+        background-color: var(--primario);
+    }
+    
+    .navegacion-principal a:visited {
+        background-color: var(--blanco);
+        color: rgb(1, 31, 6);
+    }
+    
+    .navegacion-principal a:focus {
+        background-color: chocolate;
+        color: black;
+    }
+    
+    footer {
+        width: 100%;
+        height: 81px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+    }
+    
+    footer p {
+        color: white;
+        font-size: 2rem;
+        padding: 1.2rem;
+    }
+    /* Media Queries */
+    
+    @media (min-width:480px) {
+        /*  medida standar */
         body {
-            margin: auto;
-            background: lightgray;
+            background-color: black;
+            color: cornsilk;
+            transition: .4s;
+        }
+        h1 {
             text-align: center;
-            font-family: sans-serif;
-            color: #fefefe;
-            font-size: 16px;
-            font-family: 'Pacifico', cursive;
+            color: green;
+            font-size: 6rem;
+            margin: 3rem auto;
+            padding: 0 auto;
+        }
+        .titulos {
+            display: block;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        h2 {
+            font-size: 2.8rem;
+            color: blueviolet;
+        }
+        h2 span {
+            font-size: 2.2rem;
+            color: rgb(109, 3, 3);
+            margin: 0 1rem;
+        }
+    }
+    
+    @media (min-width:768px) {
+        /*  medida standar */
+        body {
+            background-color: rgb(5, 73, 199);
+            font-size: 2rem;
+            transition: .4s;
+        }
+        .navegacion-principal {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        h1 {
+            text-align: center;
+            color: green;
+            font-size: 7rem;
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+        .titular {
+            display: block;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        h2 {
+            font-size: 2.8rem;
+            color: blue;
+        }
+        h2 span {
+            font-size: 2.2rem;
+            color: rgb(83, 2, 2);
+            margin: 0 1rem;
+        }
+    }
+    
+    @media(min-width: 1140px) {
+        /*  medida standar */
+        body {
+            background-color: rgb(140, 211, 34);
+            font-size: 3rem;
+            justify-content: space-evenly;
             height: auto;
         }
-        
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
-        
-        .titulos {
-            max-width: 100%;
-            margin: 0px auto;
-            background-color: rgb(248, 82, 82);
-        }
-        
-        .subtitulo h2 {
-            color: rgb(82, 3, 3);
-        }
-        /* navegacion */
-        
-        .nav-bg {
-            background-color: rgb(214, 252, 1);
-        }
-        
-        .navegacion-principal {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: .5rem;
-        }
-        
         .navegacion-principal a {
-            color: white;
+            color: black;
             font-size: 2rem;
             font-weight: bold;
             text-decoration: none;
-            padding: .8rem;
+            padding: .3rem;
         }
-        
-        .navegacion-principal a:hover {
-            background-color: rgb(214, 252, 1));
+    }
+    
+    @media(min-width: 1400px) {
+        /*  medida standar */
+        body {
+            background-color: rgb(214, 252, 1);
         }
-        
-        .navegacion-principal a:visited {
-            background-color: white;
-            color: rgb(1, 31, 6);
+        .cabecera {
+            font-size: 10rem;
         }
-        
-        .navegacion-principal a:focus {
-            background-color: chocolate;
-            color: rgb(128, 4, 4);
-        }
-        
-        footer {
-            width: 100%;
-            height: 81px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: black;
-        }
-        
-        footer p {
-            color: white;
-            font-size: 2rem;
-            padding: 1.2rem;
-        }
-        /* Media Queries */
-        
-        @media (min-width:480px) {
-            /*  medida standar */
-            body {
-                background-color: black;
-                color: cornsilk;
-                transition: .4s;
-            }
-            h1 {
-                text-align: center;
-                color: green;
-                font-size: 6rem;
-                margin: 3rem auto;
-                padding: 0 auto;
-            }
-            .titulos {
-                display: block;
-                justify-content: space-around;
-                align-items: flex-end;
-            }
-            h2 {
-                font-size: 2.8rem;
-                color: blueviolet;
-            }
-            h2 span {
-                font-size: 2.2rem;
-                color: rgb(109, 3, 3);
-                margin: 0 1rem;
-            }
-        }
-        
-        @media (min-width:768px) {
-            /*  medida standar */
-            body {
-                background-color: rgb(5, 73, 199);
-                font-size: 2rem;
-                transition: .4s;
-            }
-            .navegacion-principal {
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            h1 {
-                text-align: center;
-                color: green;
-                font-size: 7rem;
-                margin: 0 auto;
-                padding: 0 auto;
-            }
-            .titular {
-                display: block;
-                justify-content: space-around;
-                align-items: flex-end;
-            }
-            h2 {
-                font-size: 2.8rem;
-                color: blue);
-            }
-            h2 span {
-                font-size: 2.2rem;
-                color: rgb(83, 2, 2);
-                margin: 0 1rem;
-            }
-        }
-        
-        @media(min-width: 1140px) {
-            /*  medida standar */
-            body {
-                background-color: rgb(140, 211, 34);
-                font-size: 3rem;
-                justify-content: space-evenly;
-                height: auto;
-            }
-            .navegacion-principal a {
-                color: black;
-                font-size: 2rem;
-                font-weight: bold;
-                text-decoration: none;
-                padding: .3rem;
-            }
-        }
-        
-        @media(min-width: 1400px) {
-            /*  medida standar */
-            body {
-                background-color: rgb(214, 252, 1);
-            }
-            .cabecera {
-                font-size: 10rem;
-            }
-        }
-        
-        .container {
-            height: 8rem;
-            position: relative;
-            width: 33rem;
-            margin: 1rem auto 0 auto;
-            perspective: 80rem;
-        }
-        
-        .carousel {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 1rem;
-            bottom: 1rem;
-            left: 0;
-            transform-style: preserve-3d;
-            animation: alternate rotate360 60s infinite forwards linear;
-        }
-        
-        .carousel__face {
-            position: absolute;
-            width: 20rem;
-            height: 15rem;
-            /* top: 2rem;
+    }
+    
+    .container {
+        height: 8rem;
+        position: relative;
+        width: 33rem;
+        margin: 1rem auto 0 auto;
+        perspective: 80rem;
+    }
+    
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 1rem;
+        bottom: 1rem;
+        left: 0;
+        transform-style: preserve-3d;
+        animation: alternate rotate360 60s infinite forwards linear;
+    }
+    
+    .carousel__face {
+        position: absolute;
+        width: 20rem;
+        height: 15rem;
+        /* top: 2rem;
             left: 1rem; */
-            /* right: 1rem; */
-            background-size: cover;
-            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
-            display: flex;
+        /* right: 1rem; */
+        background-size: cover;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+        display: flex;
+    }
+    
+    span {
+        margin: auto;
+        font-size: 2rem;
+        color: rgb(214, 252, 1);
+    }
+    
+    .carousel__face:nth-child(1) {
+        background-image: url(../imagenes/galeria/Imagen7.png);
+        transform: rotateY( 0deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(2) {
+        background-image: url(../imagenes/galeria/Imagen10.png);
+        transform: rotateY( 40deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(3) {
+        background-image: url(../imagenes/galeria/Imagen11.png);
+        transform: rotateY( 80deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(4) {
+        background-image: url(../imagenes/galeria/Imagen12.png);
+        transform: rotateY(120deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(5) {
+        background-image: url(../imagenes/galeria/Imagen13.png);
+        transform: rotateY(160deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(6) {
+        background-image: url(../imagenes/galeria/Imagen14.png);
+        transform: rotateY(200deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(7) {
+        background-image: url(../imagenes/galeria/Imagen6.png);
+        transform: rotateY(240deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(8) {
+        background-image: url(../imagenes/galeria/Imagen8.png);
+        transform: rotateY(280deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(9) {
+        background-image: url(../imagenes/galeria/Imagen4.png);
+        transform: rotateY(320deg) translateZ(43rem);
+    }
+    
+    @keyframes rotate360 {
+        from {
+            transform: rotateY(0deg);
         }
-        
-        span {
-            margin: auto;
-            font-size: 2rem;
-            color: rgb(214, 252, 1);
+        to {
+            transform: rotateY(-360deg);
         }
-        
-        .carousel__face:nth-child(1) {
-            background-image: url(../imagenes/galeria/Imagen7.png);
-            transform: rotateY( 0deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(2) {
-            background-image: url(../imagenes/galeria/Imagen10.png);
-            transform: rotateY( 40deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(3) {
-            background-image: url(../imagenes/galeria/Imagen11.png);
-            transform: rotateY( 80deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(4) {
-            background-image: url(../imagenes/galeria/Imagen12.png);
-            transform: rotateY(120deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(5) {
-            background-image: url(../imagenes/galeria/Imagen13.png);
-            transform: rotateY(160deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(6) {
-            background-image: url(../imagenes/galeria/Imagen14.png);
-            transform: rotateY(200deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(7) {
-            background-image: url(../imagenes/galeria/Imagen6.png);
-            transform: rotateY(240deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(8) {
-            background-image: url(../imagenes/galeria/Imagen8.png);
-            transform: rotateY(280deg) translateZ(43rem);
-        }
-        
-        .carousel__face:nth-child(9) {
-            background-image: url(../imagenes/galeria/Imagen4.png);
-            transform: rotateY(320deg) translateZ(43rem);
-        }
-        
-        @keyframes rotate360 {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(-360deg);
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="historiaTatuaje.html">Historia del tatuaje</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+    </div>
     <div class="cabecera">
+        <header>
+            <h2 class="titular"><span> by </span> María Florencia Martino <span> Artista Plástica</span></h2>
+
+            <h1>FiFi TaToo</h1>
+
+        </header>
+
+        <!-- <div class="cabecera">
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor">
                 <a href="index.html">Inicio</a>
@@ -296,28 +328,31 @@
                 <h2>Galería</h2>
             </div>
         </header>
-    </div>
+    </div> -->
 
-    <section>
-        <div class="container">
-            <div class="carousel">
-                <div class="carousel__face"><span>Costumbristas</span></div>
-                <div class="carousel__face"><span>Colores especiales</span></div>
-                <div class="carousel__face"><span>Tradicionales</span></div>
-                <div class="carousel__face"><span>Diseños exclusivos</span></div>
-                <div class="carousel__face"><span>Cosas que te gusten</span></div>
-                <div class="carousel__face"><span>Trabajos únicos</span></div>
-                <div class="carousel__face"><span>Traiga su dibujo</span></div>
-                <div class="carousel__face"><span>Especialidad en flores</span></div>
-                <div class="carousel__face"><span>Tinturas veganas</span></div>
+        <section>
+            <div class="container">
+                <div class="carousel">
+                    <div class="carousel__face"><span>Costumbristas</span></div>
+                    <div class="carousel__face"><span>Colores especiales</span></div>
+                    <div class="carousel__face"><span>Tradicionales</span></div>
+                    <div class="carousel__face"><span>Diseños exclusivos</span></div>
+                    <div class="carousel__face"><span>Cosas que te gusten</span></div>
+                    <div class="carousel__face"><span>Trabajos únicos</span></div>
+                    <div class="carousel__face"><span>Traiga su dibujo</span></div>
+                    <div class="carousel__face"><span>Especialidad en flores</span></div>
+                    <div class="carousel__face"><span>Tinturas veganas</span></div>
+                </div>
             </div>
-        </div>
-    </section>
-    <div class="footer">
-        <footer>
-            <p>"Está muy claro que el recurso más preciado que todos tenemos es tiempo, así que tratemos de usarlo sabiamente." - Steve Jobs -😎</p>
+        </section>
+        <footer class="fin-hoja">
+            <p>Todos los derechos reservados por: <span>  .:. María Florencia Martino .:.</span></p>
         </footer>
-    </div>
+        <!-- <div class="footer">
+            <footer>
+                <!-- <p>"Está muy claro que el recurso más preciado que todos tenemos es tiempo, así que tratemos de usarlo sabiamente." - Steve Jobs -😎</p> -->
+        </footer>
+    </div> -->
 </body>
 
 </html>

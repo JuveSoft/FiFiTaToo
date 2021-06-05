@@ -12,6 +12,7 @@ html {
     box-sizing: border-box;
     /*box model*/
     scroll-snap-type: y mandatory;
+    letter-spacing: 2px;
 }
 
 *,
@@ -26,6 +27,8 @@ body {
     font-family: 'Pacifico', cursive;
     /* background-image: linear-gradient(to top, var(--verde)30%, var(--blanco)100%); */
     /* to rigth, to bottom, to left, según para que lado necesitemos el degradado */
+    background-image: linear-gradient(red, white, green, blue);
+    z-index: 100;
 }
 
 
@@ -33,10 +36,11 @@ body {
 
 h1 {
     text-align: center;
-    color: var(--verde);
+    color: rgb(5, 224, 5);
     font-size: 3rem;
     margin: 2rem auto;
     padding: 0 auto;
+    letter-spacing: 3px;
 }
 
 .titular {
@@ -65,6 +69,8 @@ h2,
 h3 {
     text-align: center;
 }
+
+.icono-menu {}
 
 
 /* Globales */
@@ -100,10 +106,11 @@ h3 {
 
 .navegacion-principal a {
     color: rgb(251, 207, 10);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 300;
     text-decoration: none;
-    padding: .8rem;
+    padding: 1rem 2rem;
+    transition: .5s;
 }
 
 .navegacion-principal a:hover {
@@ -124,17 +131,42 @@ h3 {
 /* hero */
 
 .hero {
-    background-image: url(../imagenes/galeria/Imagen14.png);
+    /* background-image: url(../imagenes/galeria/Imagen14.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-size: cover; */
     background-position: center center;
     background-attachment: fixed;
     /*con esta queda fija por detras de la página*/
-    height: 30rem;
+    /* height: 30rem; */
     position: relative;
     margin-bottom: 2rem;
 }
+
+.video-fondo {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    /* top: 50%;
+            left: 50%; */
+    /* transform: translateX(-50%), translateY(-50%); */
+    z-index: -1;
+}
+
+
+/*
+.hero video {
+    position: relative;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 98%;
+    max-height: 100vh;
+    margin: auto;
+    z-index: -1000;
+    transform: translateX(-80);
+} */
 
 .hero-servicios {
     background-size: 90%;
@@ -164,12 +196,12 @@ h3 {
 
 .contenido-hero h2,
 .contenido-hero p {
-    color: var(--blanco);
+    color: rgb(8, 247, 8);
 }
 
 .ubicacion {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .ubicacion p {
@@ -197,12 +229,14 @@ h3 {
     max-height: 100vh;
 }
 
+
+/*
 .contenedor,
 .contacto-gral,
 .fin-hoja {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+} */
 
 .servicio h3 {
     color: #212121;
@@ -337,7 +371,7 @@ input {
     }
     h1 {
         text-align: center;
-        color: var(--verde);
+        color: rgb(5, 224, 5);
         font-size: 6rem;
         margin: 3rem auto;
         padding: 0 auto;
@@ -376,7 +410,7 @@ input {
     }
     h1 {
         text-align: center;
-        color: var(--verde);
+        color: rgb(5, 224, 5);
         font-size: var(--titulo-principal);
         margin: 3rem auto;
         padding: 0 auto;
@@ -430,15 +464,14 @@ input {
     background-color: #3e06d8;
     color: var(--blanco);
     padding: 1rem 3rem;
-    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
     font-size: 2rem;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     border-radius: 5px;
-    width: 80%;
+    width: 20%;
     text-align: center;
-    margin-top: 5rem;
     border: none;
 }
 
@@ -461,16 +494,37 @@ input {
 }
 
 .fin-hoja {
+    position: relative;
+    /* position: absolute; */
+    left: 1rem;
+    right: 1rem;
+    bottom: .2rem;
     text-align: center;
     background-color: #012f05;
     font-size: 1.3rem;
     font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
-    margin: 1rem;
     color: rgb(8, 247, 8);
     border-radius: 5px;
 }
 
 .fin-hoja span {
     color: white;
+}
+
+.contenedorFP {
+    display: table;
+    width: 90%;
+    margin: auto;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.sociales a {
+    text-decoration: none;
+    color: rgb(8, 247, 8);
 }

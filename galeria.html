@@ -16,40 +16,26 @@
     <!-- Esto hace que cargue mas rápido -->
 
     <link rel="stylesheet" href="CSS/estilos.css">
-    <!--     
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiFiTaToo</title>
-    <link rel="preload" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/normalize.css">
- -->
+
+
 </head>
 <style>
-    html {
-        font-size: 62.5%;
-        box-sizing: border-box;
-        /*box model*/
-        scroll-snap-type: y mandatory;
-        min-height: 100%;
-    }
-    
     body {
         margin: auto;
-        background: lightgray;
+        background: rgb(237, 250, 190);
         text-align: center;
         font-family: sans-serif;
         color: #fefefe;
         font-size: 16px;
         font-family: 'Pacifico', cursive;
-        height: auto;
+        max-height: 100vh;
     }
-    
-    *,
+    /* *,
     *:before,
     *:after {
         box-sizing: inherit;
     }
+      */
     
     .titulos {
         max-width: 100%;
@@ -57,28 +43,10 @@
         background-color: rgb(248, 82, 82);
     }
     
-    .subtitulo h2 {
+    h2 {
         color: rgb(82, 3, 3);
     }
     /* navegacion */
-    
-    .nav-bg {
-        background-color: var(--verde);
-    }
-    
-    .navegacion-principal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .navegacion-principal a {
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 2rem;
-    }
     
     .navegacion-principal a:hover {
         background-color: var(--primario);
@@ -94,26 +62,28 @@
         color: black;
     }
     
-    footer {
-        width: 100%;
-        height: 81px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: black;
+    .fin-hoja {
+        /* position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: .2rem;
+        text-align: center;
+        background-color: #012f05;
+        font-size: 1.3rem;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 1rem;
+        color: rgb(8, 247, 8);
+        border-radius: 5px; */
     }
     
-    footer p {
+    .fin-hoja span {
         color: white;
-        font-size: 2rem;
-        padding: 1.2rem;
     }
     /* Media Queries */
     
     @media (min-width:480px) {
         /*  medida standar */
         body {
-            background-color: black;
             color: cornsilk;
             transition: .4s;
         }
@@ -138,12 +108,41 @@
             color: rgb(109, 3, 3);
             margin: 0 1rem;
         }
+        .container {
+            position: absolute;
+            top: 2rem;
+            bottom: 2rem;
+            width: 20rem;
+            margin: 1rem auto 0 auto;
+            perspective: 20rem;
+        }
+        .carousel {
+            position: absolute;
+            /* width: 100%;
+            height: 100%; */
+            top: 5rem;
+            bottom: 1rem;
+            left: 0;
+            transform-style: preserve-3d;
+            animation: alternate rotate360 60s infinite forwards linear;
+        }
+        .carousel__face {
+            position: absolute;
+            width: 15rem;
+            height: 7rem;
+            top: 2rem;
+            left: 1rem;
+            right: 1rem;
+            background-size: cover;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+            display: flex;
+            border-radius: 5px;
+        }
     }
     
     @media (min-width:768px) {
         /*  medida standar */
         body {
-            background-color: rgb(5, 73, 199);
             font-size: 2rem;
             transition: .4s;
         }
@@ -177,7 +176,6 @@
     @media(min-width: 1140px) {
         /*  medida standar */
         body {
-            background-color: rgb(140, 211, 34);
             font-size: 3rem;
             justify-content: space-evenly;
             height: auto;
@@ -185,24 +183,21 @@
         .navegacion-principal a {
             color: black;
             font-size: 2rem;
-            font-weight: bold;
+            font-weight: 500;
             text-decoration: none;
-            padding: .3rem;
+            padding: 1rem;
         }
     }
     
     @media(min-width: 1400px) {
         /*  medida standar */
-        body {
-            background-color: rgb(214, 252, 1);
-        }
         .cabecera {
             font-size: 10rem;
         }
     }
     
     .container {
-        height: 8rem;
+        /* height: 8rem;*/
         position: relative;
         width: 33rem;
         margin: 1rem auto 0 auto;
@@ -222,8 +217,8 @@
     
     .carousel__face {
         position: absolute;
-        width: 20rem;
-        height: 15rem;
+        width: 30rem;
+        height: 20rem;
         /* top: 2rem;
             left: 1rem; */
         /* right: 1rem; */
@@ -302,6 +297,7 @@
             <a href="servicios.html">Servicios</a>
             <a href="historiaTatuaje.html">Historia del tatuaje</a>
             <a href="contacto.html">Contacto</a>
+            <a href="javascript: history.go(-1)">Volver atrás</a>
 
         </nav>
     </div>
@@ -310,25 +306,7 @@
             <h2 class="titular"><span> by </span> María Florencia Martino <span> Artista Plástica</span></h2>
 
             <h1>FiFi TaToo</h1>
-
         </header>
-
-        <!-- <div class="cabecera">
-        <div class="nav-bg">
-            <nav class="navegacion-principal contenedor">
-                <a href="index.html">Inicio</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-        <header class="titulos">
-            <h2><span>by </span> María Florencia Martino <span> Artista Plástica</span></h2>
-            <h1 class="titulo">FiFi TaToo</h1>
-            <div class="subtitulo">
-                <h2>Galería</h2>
-            </div>
-        </header>
-    </div> -->
 
         <section>
             <div class="container">
@@ -345,14 +323,20 @@
                 </div>
             </div>
         </section>
-        <footer class="fin-hoja">
-            <p>Todos los derechos reservados por: <span>  .:. María Florencia Martino .:.</span></p>
-        </footer>
-        <!-- <div class="footer">
-            <footer>
-                <!-- <p>"Está muy claro que el recurso más preciado que todos tenemos es tiempo, así que tratemos de usarlo sabiamente." - Steve Jobs -😎</p> -->
-        </footer>
-    </div> -->
+
+    </div>
+
+    <footer class="fin-hoja">
+        <p>Todos los derechos reservados por: <br> <span>  .:. María Florencia Martino  &copy; 2021.:.</span></p>
+        <div class="contenedorFP">
+            <!-- <p class="copy">Mis pichichus &copy; 2021</p> -->
+            <div class="sociales">
+                <a class="icon-facebook-official" href=""></a>
+                <a class="icon-paypal" href=""></a>
+                <a class="icon-linkedin" href=""></a>
+                <a class="icon-twitter" href=""></a>
+            </div>
+    </footer>
 </body>
 
 </html>

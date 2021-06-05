@@ -40,7 +40,7 @@
 }
 
 div.item {
-    position: absolute;
+    position: relative;
     /* width: 600px;
     height: 400px; */
     background-color: coral;
@@ -52,7 +52,7 @@ div.item {
 }
 
 .contenedor_imagenes {
-    position: absolute;
+    position: relative;
 }
 
 div.item:nth-of-type(1) {

@@ -37,8 +37,8 @@ body {
 h1 {
     text-align: center;
     color: rgb(5, 224, 5);
-    font-size: 3rem;
-    margin: 2rem auto;
+    font-size: 2.2rem;
+    margin: 1rem auto;
     padding: 0 auto;
     letter-spacing: 3px;
 }
@@ -50,12 +50,12 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--azul);
 }
 
 h2 span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: rgb(250, 28, 28);
     margin: 0 1rem;
 }
@@ -470,7 +470,7 @@ input {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     border-radius: 5px;
-    width: 20%;
+    min-width: 220px;
     text-align: center;
     border: none;
 }
@@ -494,8 +494,8 @@ input {
 }
 
 .fin-hoja {
-    position: relative;
-    /* position: absolute; */
+    /* position: relative; */
+    position: absolute;
     left: 1rem;
     right: 1rem;
     bottom: .2rem;

@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="preload" href="CSS/estilos.css" as="style">
     <!-- Esto hace que cargue mas rápido -->
-
+    <link rel="stylesheet" href="CSS/fontello.css">
+    <link rel="stylesheet" href="font/fontello.svg">
     <link rel="stylesheet" href="CSS/estilos.css">
-
-
+    <script src="JS/javascript.js"></script>
 </head>
 <style>
     body {
@@ -30,12 +30,186 @@
         font-family: 'Pacifico', cursive;
         max-height: 100vh;
     }
+    
+    .container {
+        position: absolute;
+        top: 28rem;
+        bottom: 2rem;
+        width: 80%;
+        margin: 1rem auto 0 auto;
+        perspective: 80rem;
+    }
+    
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* top: 5rem;
+        bottom: 1rem;
+        left: 0; */
+        transform-style: preserve-3d;
+        animation: alternate rotate360 60s infinite forwards linear;
+    }
+    
+    .carousel__face {
+        position: absolute;
+        width: 20rem;
+        height: 15rem;
+        top: 2rem;
+        left: 1rem;
+        right: 1rem;
+        background-size: cover;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+        display: flex;
+        border-radius: 20px;
+    }
+    
+    span {
+        margin: auto;
+        font-size: 1.3rem;
+        color: rgb(214, 252, 1);
+    }
+    
+    .carousel__face:nth-child(1) {
+        background-image: url(../imagenes/galeria/Imagen7.png);
+        transform: rotateY( 0deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(2) {
+        background-image: url(../imagenes/galeria/Imagen10.png);
+        transform: rotateY( 40deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(3) {
+        background-image: url(../imagenes/galeria/Imagen11.png);
+        transform: rotateY( 80deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(4) {
+        background-image: url(../imagenes/galeria/Imagen12.png);
+        transform: rotateY(120deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(5) {
+        background-image: url(../imagenes/galeria/Imagen13.png);
+        transform: rotateY(160deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(6) {
+        background-image: url(../imagenes/galeria/Imagen14.png);
+        transform: rotateY(200deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(7) {
+        background-image: url(../imagenes/galeria/Imagen6.png);
+        transform: rotateY(240deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(8) {
+        background-image: url(../imagenes/galeria/Imagen8.png);
+        transform: rotateY(280deg) translateZ(43rem);
+    }
+    
+    .carousel__face:nth-child(9) {
+        background-image: url(../imagenes/galeria/Imagen4.png);
+        transform: rotateY(320deg) translateZ(43rem);
+    }
+    
+    @keyframes rotate360 {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="video-fondo">
+
+        <!-- <video src="imagenes/videos/procesoTatoo.mp4" autoplay muted loop></video> -->
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel__face"><span>Costumbristas</span></div>
+                <div class="carousel__face"><span>Colores especiales</span></div>
+                <div class="carousel__face"><span>Tradicionales</span></div>
+                <div class="carousel__face"><span>Diseños exclusivos</span></div>
+                <div class="carousel__face"><span>Cosas que te gusten</span></div>
+                <div class="carousel__face"><span>Trabajos únicos</span></div>
+                <div class="carousel__face"><span>Traiga su dibujo</span></div>
+                <div class="carousel__face"><span>Especialidad en flores</span></div>
+                <div class="carousel__face"><span>Tinturas veganas</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bg">
+
+        <nav class="navegacion-principal contenedor">
+            <a href="servicios.html">Servicios</a>
+            <a href="galeria.html">Galería</a>
+            <a href="historiaTatuaje.html">Historia del tatuaje</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+    </div>
+    <div class="cabecera">
+        <header>
+
+            <h2 class="titular"><span> by </span> María Florencia Martino <span> Artista Plástica</span></h2>
+
+            <h1>FiFi TaToo</h1>
+
+        </header>
+
+        <!-- <section class="hero">
+           
+            <div class="contenido-hero">
+                <h2>Diseños y desarrollos propios</h2>
+                <div class="ubicacion">
+                    <a href="https://www.google.com.ar/maps/place/Bulnes+741,+C1176+ABM,+Buenos+Aires/@-34.6030013,-58.4200197,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca61f86c1fd5:0x7ca4ab17c8ae9003!8m2!3d-34.6030057!4d-58.417831">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="5rem" height="5rem" viewBox="0 0 30 30" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg></a>
+                    <p>C . A . B . A</p>
+                </div>
+                <a class="boton" href="contacto.html">Contactar</a>
+            </div>
+        </section> -->
+    </div>
+
+    <footer class="fin-hoja">
+        <p>Todos los derechos reservados por: <br> <span>  .:. María Florencia Martino  &copy; 2021.:.</span></p>
+        <div class="contenedorFP">
+            <!-- <p class="copy">Mis pichichus &copy; 2021</p> -->
+            <div class="sociales">
+                <a class="icon-facebook-official" href=""></a>
+                <a class="icon-paypal" href=""></a>
+                <a class="icon-linkedin" href=""></a>
+                <a class="icon-twitter" href=""></a>
+                <a class="icon-email" href="mailto:flopa-thepolc@gmail.com"></a>
+                <a href="https://www.instagram.com/fifitattoo/?hl=es">
+                    <img src="imagenes/iconos/instagram.svg" alt="" width="30px" height="30px" color="rgb(8, 247, 8)">
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+<!-- 
     /* *,
     *:before,
     *:after {
         box-sizing: inherit;
     }
-      */
+      */ 
     
     .titulos {
         max-width: 100%;
@@ -329,7 +503,7 @@
     <footer class="fin-hoja">
         <p>Todos los derechos reservados por: <br> <span>  .:. María Florencia Martino  &copy; 2021.:.</span></p>
         <div class="contenedorFP">
-            <!-- <p class="copy">Mis pichichus &copy; 2021</p> -->
+            <!-- <p class="copy">Mis pichichus &copy; 2021</p> 
             <div class="sociales">
                 <a class="icon-facebook-official" href=""></a>
                 <a class="icon-paypal" href=""></a>
@@ -344,4 +518,4 @@
     </footer>
 </body>
 
-</html>
+</html> -->

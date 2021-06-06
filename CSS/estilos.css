@@ -36,8 +36,8 @@ body {
 
 h1 {
     text-align: center;
-    color: rgb(5, 224, 5);
-    font-size: 2.2rem;
+    color: rgb(4, 196, 4);
+    font-size: 3rem;
     margin: 1rem auto;
     padding: 0 auto;
     letter-spacing: 3px;
@@ -494,8 +494,8 @@ input {
 }
 
 .fin-hoja {
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     left: 1rem;
     right: 1rem;
     bottom: .2rem;

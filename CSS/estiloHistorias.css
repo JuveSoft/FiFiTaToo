@@ -10,10 +10,6 @@
         background-color: rgb(188, 223, 247);
     }
     
-    .nav-bg {
-        background-color: green;
-    }
-    
     .cabecera span {
         font-family: 'Pacifico', cursive;
         padding: 1rem;
@@ -24,21 +20,35 @@
         max-width: 95%;
         margin: 0px auto;
     }
+    /* navegacion */
+    
+    .nav-bg {
+        background-color: green;
+    }
     
     .navegacion-principal {
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-evenly; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .navegacion-principal a {
-        color: white;
+        color: rgb(251, 207, 10);
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        transition: .5s;
+        /* color: white;
         font-size: 1.3rem;
         font-weight: bold;
         text-decoration: none;
-        padding: 1rem;
+        padding: 1rem; */
     }
-    
+    /*     
     .navegacion-principal a:hover {
         background-color: yellowgreen;
         font-weight: 700;
@@ -46,6 +56,20 @@
     
     .navegacion-principal a:visited {
         background-color: white;
+        color: black;
+    }
+    
+    .navegacion-principal a:focus {
+        background-color: chocolate;
+        color: black;
+    } */
+    
+    .navegacion-principal a:hover {
+        background-color: var(--primario);
+    }
+    
+    .navegacion-principal a:visited {
+        background-color: #87f349;
         color: black;
     }
     
@@ -63,21 +87,21 @@
     h1 {
         text-align: center;
         color: rgb(5, 224, 5);
-        font-size: 2.2rem;
+        font-size: 3rem;
         margin: 1rem auto;
         padding: 0 auto;
         letter-spacing: 3px;
     }
     
     h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
         align-items: center;
         padding: 1.3rem;
     }
     
     h3 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: bold;
         text-align: center;
         padding: 1rem 5rem 0 5rem;
@@ -90,7 +114,7 @@
         column-gap: 1rem;
         height: auto;
         width: 95%;
-        margin: 2rem auto;
+        margin: 1rem auto;
         border-radius: 5px;
     }
     
@@ -104,7 +128,7 @@
     .servicio2 {
         box-shadow: 5px 55px 55px 5px rgba(102, 229, 246, 0.6);
         max-width: 95%;
-        margin: 5rem auto;
+        margin: 1.5rem auto;
         border-radius: 5px;
     }
     

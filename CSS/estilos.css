@@ -29,6 +29,7 @@ body {
     /* to rigth, to bottom, to left, según para que lado necesitemos el degradado */
     background-image: linear-gradient(red, white, green, blue);
     z-index: 100;
+    background-image: no-repeat;
 }
 
 
